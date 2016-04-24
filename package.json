@@ -4,8 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine-node test --watch . --autotest --growl --color"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "jasmine-node": "^1.14.5",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {}
 }
