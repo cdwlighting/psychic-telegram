@@ -1,4 +1,4 @@
-var ChessPieces = require('../../ChessPieces/Rook.js');
+var ChessPieces = require('../../ChessPieces');
 
 (function RookTest(ChessPieces){
     describe('Rook Cheese Piece', function() {

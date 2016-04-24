@@ -1,4 +1,4 @@
-var ChessPieces = require('../..//ChessPieces/King');
+var ChessPieces = require('../../ChessPieces.js');
 
 (function KingTest(){
     describe('King Chess Pieces', function(){

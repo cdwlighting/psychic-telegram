@@ -1,9 +1,8 @@
-var ChessPieces = ChessPieces || {};
-ChessPieces = require('./Queen');
+var Queen = require('./Queen');
 
-ChessPieces = (function (ChessPieces){
+module.exports = (function (Queen){
 
-    ChessPieces.Pawn = function Pawn(location){
+    return function Pawn(location){
         if(!location)
             throw "Must provide a starting location";
 
@@ -20,7 +19,7 @@ ChessPieces = (function (ChessPieces){
 
             } else {
                 results.push('Promotion: Queen');
-                var queen = new ChessPieces.Queen(String.fromCharCode(col + 65) + ((1 + row)));
+                var queen = new Queen(String.fromCharCode(col + 65) + ((1 + row)));
                 results = results.concat(queen.getMoves());
 
             }
@@ -28,9 +27,4 @@ ChessPieces = (function (ChessPieces){
             return results;
         }
     };
-
-    return ChessPieces;
-
-})(ChessPieces);
-
-module.exports = ChessPieces;
+})(Queen);

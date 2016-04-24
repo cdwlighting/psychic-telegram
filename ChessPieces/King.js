@@ -1,8 +1,6 @@
-var ChessPieces = ChessPieces || {};
+module.exports = (function (){
 
-ChessPieces = (function (ChessPieces){
-
-    ChessPieces.King = function King(location) {
+    return  function King(location) {
         if(!location)
             throw "Must provide a starting location";
 
@@ -30,10 +28,6 @@ ChessPieces = (function (ChessPieces){
 
             return moves;
         };
-    }
+    };
 
-    return ChessPieces;
-
-})(ChessPieces);
-
-module.exports = ChessPieces;
+})();
